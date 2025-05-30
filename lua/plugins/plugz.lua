@@ -14,19 +14,15 @@ return {
         sections = {
           {
             section = "terminal",
-            cmd = "img2art ~/Downloads/BackgroundNvim.png  --scale .25 --with-color --threshold 145",
-            height = 15,
-            indent = 10,
+            cmd = 'chafa -f symbols --clear -c full --passthrough=tmux --scale=0.7 --stretch "$HOME/Downloads/dog.jpg"',
+            --cmd = "kitty +kitten icat --scale-up --place 40x20@10x5 $HOME/Downloads/dog.jpg",
+
+            height = 10,
+            indent = 0,
             gap = 0,
-            padding = 4,
-          },
-          {
-            pane = 2,
-            section = "terminal",
-            cmd = "colorscript -e square",
-            height = 5,
             padding = 1,
           },
+
           { section = "keys", gap = 1, padding = 1 },
           {
             pane = 2,
@@ -112,7 +108,7 @@ return {
       words = { enabled = true },
       styles = {
         notification = {
-          -- wo = { wrap = true }, -- Wrap notifications
+          wo = { wrap = true }, -- Wrap notifications
         },
       },
     },
